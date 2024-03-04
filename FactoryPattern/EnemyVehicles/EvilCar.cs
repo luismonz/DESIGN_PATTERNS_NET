@@ -29,4 +29,13 @@ public class EvilCar : BasicVehicleAttributes, IEnemyVehicle
     {
         this._vehicleCoordinates.Pos_X += 2;
     }
+
+    public override string ToString()
+    {
+        return $"EVIL CAR: \n" +
+            $"---- Weapon: {_vehicleWeapon.ToString()}, \n" +
+            $"---- Coordinates: {_vehicleCoordinates.ToString()}, " +
+            $"---- Wheels Quantity: {_wheelsQuantity}";
+    }
+
 }

@@ -19,6 +19,12 @@ public class PizzaBooster : IWeaponBooster
         _slicesQuantity = 8;
     }
 
+    public PizzaBooster()
+    {
+        _damageToBoost = 15;
+        _slicesQuantity = 8;
+    }
+
     public int UpgradeDamageToGameItem()
     {
         return _damageToBoost * _slicesQuantity;
@@ -28,4 +34,11 @@ public class PizzaBooster : IWeaponBooster
     {
         _boosterCoordinates.Pos_X += 5;
     }
+
+    public override string ToString()
+    {
+        string coordinatesInfo = _boosterCoordinates != null ? $", Coordinates: {_boosterCoordinates}" : "";
+        return $"Pizza Booster - Damage Boost: {_damageToBoost}{coordinatesInfo}";
+    }
+
 }

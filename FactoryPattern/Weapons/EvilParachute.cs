@@ -34,4 +34,11 @@ public class EvilParachute : BasicWeaponsAttributes, IVehicleWeapon
         FallingWithStyle();
         return DefaultDamage;
     }
+
+    public override string ToString()
+    {
+        string boosterInfo = _weaponBooster != null ? $", Booster: {_weaponBooster}" : "";
+        return $"Evil Parachute - Damage: {DefaultDamage}{boosterInfo}";
+    }
+
 }

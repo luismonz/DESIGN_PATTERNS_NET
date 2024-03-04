@@ -18,6 +18,11 @@ public class MushroomBooster : IWeaponBooster
         _damageToBoost = 10;
     }
 
+    public MushroomBooster()
+    {
+        _damageToBoost = 10;
+    }
+
     public int UpgradeDamageToGameItem()
     {
         return _damageToBoost;
@@ -27,4 +32,11 @@ public class MushroomBooster : IWeaponBooster
     {
         _boosterCoordinates.Pos_X += 3;
     }
+
+    public override string ToString()
+    {
+        string coordinatesInfo = _boosterCoordinates != null ? $", Coordinates: {_boosterCoordinates}" : "";
+        return $"Mushroom Booster - Damage Boost: {_damageToBoost}{coordinatesInfo}";
+    }
+
 }

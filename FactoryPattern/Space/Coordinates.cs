@@ -16,5 +16,11 @@ namespace FactoryPattern.Space
             Pos_X = x;
             Pos_Y = y;
         }
+
+        public override string ToString()
+        {
+            return $"({Pos_X}, {Pos_Y})";
+        }
+
     }
 }

@@ -14,12 +14,12 @@ namespace FactoryPattern.Space
         private int _maxX;
         private int _maxY;
 
-        public MetricSpace(int minX, int minY, int maxX, int maxY)
+        public MetricSpace(Coordinates MinCoordinates, Coordinates MaxCoordinates)
         {
-            _minX = minX;
-            _minY = minY;
-            _maxX = maxX;
-            _maxY = maxY;
+            _minX = MinCoordinates.Pos_X;
+            _minY = MinCoordinates.Pos_Y;
+            _maxX = MaxCoordinates.Pos_X;
+            _maxY = MaxCoordinates.Pos_Y;
         }
 
         public bool IsInside(int x, int y)

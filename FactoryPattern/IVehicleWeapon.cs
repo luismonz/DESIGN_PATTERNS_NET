@@ -8,4 +8,5 @@ namespace FactoryPattern;
 public interface IVehicleWeapon
 {
     int TotalDamageToPlayer();
+    void SetWeaponBooster(IWeaponBooster weaponBooster);
 }

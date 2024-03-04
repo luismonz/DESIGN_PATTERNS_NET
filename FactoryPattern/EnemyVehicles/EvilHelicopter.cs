@@ -27,4 +27,11 @@ public class EvilHelicopter : BasicVehicleAttributes, IEnemyVehicle
     {
         this._vehicleCoordinates.Pos_X += 2;
     }
+
+    public override string ToString()
+    {
+        return $"EVIL HELICOPTER: \n" +
+            $"---- Weapon: {_vehicleWeapon.ToString()}, \n" +
+            $"---- Coordinates: {_vehicleCoordinates.ToString()}";
+    }
 }
